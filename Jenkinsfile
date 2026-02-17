@@ -14,7 +14,7 @@ pipeline {
 						script: "dotnet minver --tag-prefix v",
 						returnStdout: true
 						).trim()
-					echo "App version: ${APP_VERSION}
+					echo "App version: ${APP_VERSION}"
 				}
 			}
 		}
