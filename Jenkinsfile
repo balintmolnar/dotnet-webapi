@@ -10,6 +10,8 @@ pipeline {
 		stage('Versioning') {
 			steps {
 				script {
+					echo "Tag name: ${TAG_NAME}"
+					sh "dotnet restore"
 					APP_VERSION = sh(
 						script: "dotnet minver --tag-prefix v",
 						returnStdout: true
