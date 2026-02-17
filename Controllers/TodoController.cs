@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 [Microsoft.AspNetCore.Mvc.ApiController]
 [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
@@ -17,5 +18,19 @@ public class TodoController : Microsoft.AspNetCore.Mvc.ControllerBase
         _db.Todos.Add(item);
         await _db.SaveChangesAsync();
         return Ok(item);
+    }
+
+    [HttpGet("version")]
+    public IActionResult GetVersion()
+    {
+        var version = Assembly.GetExecutingAssembly()
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            ?.InformationalVersion;
+
+        return Ok(new
+        {
+            Version = version,
+            Runtime = System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription
+        });
     }
 }
