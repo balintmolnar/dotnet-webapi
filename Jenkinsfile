@@ -10,6 +10,7 @@ pipeline {
 		stage('Versioning') {
 			steps {
 				script {
+					sh "git fetch --tags"
 					APP_VERSION = sh(
 						script: "git describe --tags --abbrev=0",
 						returnStdout: true
