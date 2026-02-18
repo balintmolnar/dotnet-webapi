@@ -5,6 +5,7 @@ pipeline {
 		ECR_REGISTRY_URL = "957478052151.dkr.ecr.eu-central-1.amazonaws.com"
 		APP_NAME = "dotnet-webapi"
 		REGION = "eu-central-1"
+		APP_VERSION = ""
 	}
 	stages {
 		stage('Versioning') {
