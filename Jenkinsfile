@@ -10,9 +10,8 @@ pipeline {
 		stage('Versioning') {
 			steps {
 				script {
-					sh "dotnet restore"
 					APP_VERSION = sh(
-						script: "dotnet minver --tag-prefix v",
+						script: "git describe --tags --abbrev=0",
 						returnStdout: true
 						).trim()
 					echo "App version: ${APP_VERSION}"
