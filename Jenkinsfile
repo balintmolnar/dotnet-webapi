@@ -2,18 +2,18 @@ pipeline {
 	agent any
 	
 	environment {
-		ECR_REGISTRY_URL = "957478052151.dkr.ecr.eu-central-1.amazonaws.com/dotnet-webapi"
+		ECR_REGISTRY_URL = "957478052151.dkr.ecr.eu-central-1.amazonaws.com"
 		APP_NAME = "dotnet-webapi"
 		REGION = "eu-central-1"
+		APP_VERSION = ""
 	}
 	stages {
 		stage('Versioning') {
 			steps {
 				script {
-					echo "Tag name: ${TAG_NAME}"
-					sh "dotnet restore"
+					sh "git fetch --tags"
 					APP_VERSION = sh(
-						script: "dotnet minver --tag-prefix v",
+						script: "git describe --tags --abbrev=0",
 						returnStdout: true
 						).trim()
 					echo "App version: ${APP_VERSION}"
