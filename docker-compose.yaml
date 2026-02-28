@@ -16,3 +16,4 @@ services:
       ConnectionStrings__DefaultConnection: "Host=db;Database=tododb;Username=user;Password=password"
     depends_on:
       - db
+    restart: on-failure:10
