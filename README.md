@@ -36,7 +36,7 @@ Pipeline stages:
 
 Jenkins accesses the AWS ECR and the AWS EKS with a dedicated AWS user following the principle of least privilege.
 
-![Jenkins pipeline stage view](images/Jenkins-pipeline-stage-view-2026-02-27 163307.png)
+![Jenkins pipeline stage view](images/Jenkins-pipeline-stage-view-2026-02-27-163307.png)
 
 ```mermaid
 graph LR
