@@ -2,6 +2,24 @@
 
 .NET 8 web API with Docker & Helm packaging and Jenkins CI/CD pipeline for AWS EKS deployment.
 
+<!-- TOC -->
+- [Cloud-Native .NET Web API ☁️](#cloud-native-net-web-api-️)
+  - [Web API](#web-api)
+  - [Packaging](#packaging)
+    - [Docker image](#docker-image)
+    - [Helm chart](#helm-chart)
+  - [CI/CD](#cicd)
+  - [Versioning](#versioning)
+  - [Infrastructure](#infrastructure)
+  - [How to run locally](#how-to-run-locally)
+  - [How to deploy to EKS cluster](#how-to-deploy-to-eks-cluster)
+    - [Prerequisites](#prerequisites)
+    - [Deployment](#deployment)
+  - [How to run pipeline](#how-to-run-pipeline)
+  - [Some lessons learned](#some-lessons-learned)
+    - [EKS cluster permissions](#eks-cluster-permissions)
+    - [Port number](#port-number)
+
 ## Web API
 
 Simple .NET web API with health checks and a PostgreSQL connection.
