@@ -4,6 +4,7 @@
 
 <!-- TOC -->
 - [Cloud-Native .NET Web API ☁️](#cloud-native-net-web-api-️)
+  - [▶️ Demo Video](#️-demo-video)
   - [Web API](#web-api)
   - [Packaging](#packaging)
     - [Docker image](#docker-image)
@@ -19,6 +20,12 @@
   - [Some lessons learned](#some-lessons-learned)
     - [EKS cluster permissions](#eks-cluster-permissions)
     - [Port number](#port-number)
+
+## ▶️ Demo Video
+
+[![Project Demo Video](https://img.youtube.com/vi/4tzzKOdlodE/0.jpg)](https://youtu.be/4tzzKOdlodE)
+
+*Please click on the image to watch the video*
 
 ## Web API
 
